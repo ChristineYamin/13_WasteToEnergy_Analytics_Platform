@@ -1,5 +1,7 @@
 streamlit
 pandas
+numpy
 prophet
-plotly
+joblib
 scikit-learn
+plotly
