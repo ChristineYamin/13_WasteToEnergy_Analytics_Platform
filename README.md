@@ -1,6 +1,6 @@
 # ♻️ Smart Waste Management Strategy Advisor
 
-An AI-powered decision support system that helps waste management authorities and Waste-to-Energy (WtE) plant managers evaluate waste composition, estimate energy recovery potential, and select the most effective environmental strategy to reduce CO₂ emissions.
+An AI-powered decision support system that helps waste management authorities and Waste-to-Energy (WtE) managers evaluate waste composition, estimate energy recovery potential, and select the most effective environmental strategy to reduce CO₂ emissions.
 
 ---
 
@@ -92,8 +92,8 @@ A supervised regression model trained to predict CO₂ emission reduction potent
 - XGBoost Regressor
 
 #### Final model:
-- Selected based on performance (R², RMSE, MAE)
-
+I used linear regression, Random Forest and XGBoost and 
+the best model is the linear regression according to performance (R², RMSE, MAE)
 ---
 
 ### ⚠️ 7. Strategic Decision Alerts

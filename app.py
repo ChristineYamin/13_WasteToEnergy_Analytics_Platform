@@ -60,15 +60,27 @@ with tab2:
     if score > 75: 
         st.success("🟢 **HIGH POTENTIAL (75+)**")
         with st.container(border=True):
-            st.markdown("**👉 Decision:** Prioritize WtE expansion. **👉 Why:** High energy recovery = higher revenue.")
+            st.markdown("""
+        **👉 Waste Profile:** Rich in high-calorific materials (Plastic, Paper, Rubber, Textile).
+        **👉 Decision:** Prioritize WtE expansion and thermal plant optimization.
+        **👉 Why it matters:** High energy recovery = higher revenue potential; reduces landfill dependency.
+        """)
     elif score > 50:
         st.warning("🟡 **MODERATE POTENTIAL (50–75)**")
         with st.container(border=True):
-            st.markdown("**👉 Decision:** Build Hybrid System (Anaerobic Digestion + WtE). **👉 Priority:** Segregate organics.")
+            st.markdown("""
+        **👉 Waste Profile:** Balanced mix of organic (Food, Garden) and calorific materials.
+        **👉 Decision:** Do NOT invest only in WtE. Build a **Hybrid System** (Anaerobic Digestion + WtE).
+        **👉 Priority Action:** Improve waste segregation to separate organics from high-calorific recyclables.
+        """)
     else:
         st.error("🔴 **LOW POTENTIAL (<50)**")
         with st.container(border=True):
-            st.markdown("**👉 Decision:** Focus on Composting/Biogas. **👉 Note:** Thermal WtE is financially inefficient here.")
+            st.markdown("""
+        **👉 Waste Profile:** High moisture content (primarily Food/Garden waste).
+        **👉 Decision:** Avoid large-scale incineration. Focus on **Composting or Biogas infrastructure**.
+        **👉 Risk note:** Traditional thermal WtE is financially inefficient here due to high moisture levels.
+        """)
 
     st.subheader("⚙️ Strategy Performance")
     scenario_df = country_df.groupby("scenario")["co₂_emissions_reduction_potential"].mean().reset_index()
